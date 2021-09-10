@@ -1,3 +1,8 @@
+/*
+This function is invoked when user click any of the radio buttons. This is used to change
+the attribute value of the input box so your gets the correct information on input box.
+
+*/
 var radioChecker = () => {
     var inputData = document.getElementById("data");
     var radioBtn = document.querySelector("input[name='user-choice']:checked").value;
@@ -11,7 +16,11 @@ var radioChecker = () => {
         inputData.setAttribute("type", "text");
     }
 }
-
+/*
+This is the main function that is being called when user clicks on check btn. This will
+first check what the user is wanting , trying to check the number or string as palindrome.
+Depending on that conditional will run and we get the result.
+*/
 var palindromeChecker = () => {
     var inputData = document.getElementById("data");
     var attributeValue = inputData.getAttribute("type");
@@ -51,7 +60,8 @@ var palindromeChecker = () => {
         }
     }
 }
-
+//This is the function that clears the input data . It is just as refreshing the page 
+//so that code can re-run from beginning
 var resetData = () => {
     var number = document.getElementById("data");
     var result = document.querySelector(".result");
