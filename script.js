@@ -25,8 +25,12 @@ var palindromeChecker = () => {
     var inputData = document.getElementById("data");
     var attributeValue = inputData.getAttribute("type");
     var result = document.querySelector(".result");
-
-    if (attributeValue == "number") {
+   
+    if(inputData.value.length===0){
+        result.innerText="Cannot accept empty value !";
+        result.style.opacity = 1;
+    }
+    else if (attributeValue == "number") {
         var number = parseInt(inputData.value);
         var reverseNumber = 0;
         var tempNumber = number;
